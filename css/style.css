@@ -1,0 +1,391 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 0 65px;
+}
+
+table thead th{
+  color: white;
+  background: #34495e;
+  padding: 10px;
+  height: 20px;
+}
+
+table td {
+  padding: 10px;
+}
+table tr {
+  height: 20px;
+}
+
+table tr:nth-child(even) {
+  background: #ccc;
+}
+
+div#barraMenu {
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: #34495e;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+div#barraMenu a {
+  color: white;
+  margin: 0 20px;
+  display: block;
+  float: left;
+}
+
+div#fondoAleatorio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: gray;
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+div#fondoAleatorio img {width: 100%;}
+
+section#noticias {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+div#contenedorNoticias {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+div#contenedorNoticias div {
+  margin-left: 20px;
+  width: 400px;
+}
+
+section#noticias img {
+  width: 100%;
+}
+
+section#noticias h2 {
+  font-size: 1rem;
+  text-align: left;
+}
+
+section#noticias input {
+  background-color: transparent;
+  color: #34495e;
+  border: 1px solid #34495e;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+
+section#noticias input:hover {
+  background-color: #34495e;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* ----------------------- TODAS LAS NOTICIAS -------------*/
+
+section#todasNoticias, section#todosClientes, section#trabajos, section#nuevaNoticia, section#borrarNoticias, section#buscarNoticias, section#buscarTrabajos, section#nuevoTrabajo, section#borrarTrabajos, section#nuevoCliente, section#buscarClientes {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 15%;
+}
+section#buscarNoticias input, .eliminar {
+  background: red;
+}
+
+small {
+  margin-top: 20px;
+}
+
+form {
+  text-align: center;
+}
+
+div#submenuNoticias, div#submenuClientes, div#submenuTrabajos {
+  top: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background: black;
+}
+
+div#submenuNoticias ul, div#submenuClientes ul, div#submenuTrabajos ul {
+  margin-top: 100px;
+  padding: 20px;
+}
+div#submenuNoticias ul li, div#submenuClientes ul li, div#submenuTrabajos ul li {
+  display: inline-block;
+
+}
+
+div#submenuNoticias ul li a, div#submenuClientes ul li a, div#submenuTrabajos ul li a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+div#contenedorTodasNoticias, div#contenedorTodosClientes, div#contenedorTrabajos, div#contenedorNuevaNoticia, div#contenedorBorrarNoticias, div#contenedorBuscarNoticias, div#contenedorBuscarTrabajos, div#contenedorNuevoTrabajo, div#contenedorBorrarTrabajos, div#contenedorNuevoCliente, div#contenedorBuscarClientes {
+  width: 100%;
+  /*height: 50vh;*/
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  margin: 5% 0;
+}
+
+div#contenedorTodasNoticias div, div#contenedorBorrarNoticias div, div#contenedorBuscarNoticias div, div#contenedorTrabajos div, div#contenedorBuscarTrabajos div, div#contenedorBorrarTrabajos div, div#contenedorBuscarClientes div {
+  margin-top: 5%;
+  width: 400px;
+  height: 350px;
+}
+
+
+section#todasNoticias h2, section#borrarNoticias h2, section#buscarNoticias h2, div#contenedorTrabajos h2,  section#buscarTrabajos h2, section#borrarTrabajo h2, section#buscarClientes h2 {
+  font-size: 1rem;
+  text-align: left;
+}
+
+section#todasNoticias input, section#buscarNoticias input, section#buscarTrabajos input, section#buscarClientes input {
+  background-color: transparent;
+  color: #34495e;
+  border: 1px solid #34495e;
+  padding: 10px 15px;
+  border-radius: 50px;
+  outline: none;
+}
+
+section#buscarTrabajos input:first-child {
+  background-color: transparent;
+  width: 400px;
+  color: #34495e;
+  border: 1px solid #34495e;
+  padding: 10px 15px;
+  border-radius: 50px;
+  outline: none;
+}
+
+section#buscarNoticias input.buscador, section#buscarTrabajos input.buscador, section#buscarClientes input.buscador {
+  margin-top: 80px;
+  font-size: 1.5rem;
+
+}
+
+section#borrarNoticias input, section#borrarTrabajo input {
+  background-color: transparent;
+  color: red;
+  border: 1px solid red;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+.eliminar {
+  background-color: transparent;
+  color: red;
+  border: 1px solid red;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+
+section#todasNoticias input:hover {
+  background-color: #34495e;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+section#buscarNoticias input, section#buscarTrabajos input, section#buscarClientes input {
+  margin-top: 5%;
+  margin-right: 10px;
+}
+
+section#buscarNoticias input:nth-child(2), section#buscarTrabajos input:nth-child(2) {
+  margin-top: 5%;
+  margin-left: 10px;
+}
+
+section#buscarNoticias input:hover, section#buscarTrabajos input:last-child:hover, .enviar, table input {
+  background-color: transparent;
+  color: #34495e;
+  border: 1px solid #34495e;
+  padding: 10px 15px;
+  border-radius: 50px;
+  outline: none;
+}
+
+
+section#buscarNoticias input:nth-child(2):hover, section#buscarTrabajos input:last-child:hover, .enviar:hover, table input:hover {
+  background-color: #34495e;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+section#borrarNoticias input:hover, section#borrarTrabajo input:hover  {
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.eliminar:hover {
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+div#cajaNoticia, div#cajaTrabajo {
+  box-shadow: 0 0 20px #ccc;
+  display: flex;
+  text-align: left;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+div#imgNoticias, div#imgTrabajo {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;;
+}
+
+section#todasNoticias img, section#trabajos img {
+  width: 120%;
+}
+
+div#footer {
+  margin-top: 5%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+}
+
+div#footer i {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+div#footer i:hover {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+div#formulario {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 50%;
+  width: 30%;
+  border: solid 1px #34495e;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+div#formulario input {
+  border: solid 1px #34495e;
+  height: 50px;
+  width: 100%;
+  padding: 0 10%;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+div#formulario input:nth-child(5) {
+  display: inline-block;
+  text-align: center;
+}
+
+div#formulario input:nth-child(6) {
+  display: block;
+  margin: 0 auto;
+}
+
+div#formulario input:nth-child(7) {
+  background-color: transparent;
+  border: solid 1px #34495e;
+  border-radius: 50px;
+}
+
+div#formulario input:nth-child(7):hover {
+  background-color: #34495e;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+div#formulario .correcto {
+  color: green;
+  text-align: center;
+}
+
+div#formulario .incorrecto {
+  color: red;
+}
